@@ -6,7 +6,7 @@ fn rev_sort(mut arr: Vec<i32>) -> Vec<i32> {
     while let Some(x) = pq.pop() {
         ans.push(x);
     }
-    ans
+    ans.into_iter().rev().collect()
 }
 
 #[cfg(test)]
