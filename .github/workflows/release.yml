@@ -111,6 +111,7 @@ jobs:
         shell: bash
         run: |
           BINARY_NAME=cicd-dem
+          cd target/${{ matrix.job.target }}/release
           RELEASE_NAME=cicd-demo-${{ matrix.job.artifact_prefix }}
           tar czvf $RELEASE_NAME.tar.gz $BINARY_NAME
           # create sha checksum files
